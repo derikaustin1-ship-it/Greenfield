@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-greenfield-primary: #124032;
+    --color-greenfield-primary-light: #1b5e4a;
+    --color-greenfield-secondary: #2e7d5e;
+    --color-greenfield-accent: #eab308;
+    --color-greenfield-bg: #faf9f5;
+    --color-greenfield-card: #ffffff;
+    --color-greenfield-text: #1f2937;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--color-greenfield-bg);
+    color: var(--color-greenfield-text);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #124032;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1b5e4a;
+}
+
+/* Accessible focus ring */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid #124032;
+  outline-offset: 2px;
+}
+
+/* Custom Utility Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
